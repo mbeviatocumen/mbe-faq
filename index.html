@@ -14,80 +14,148 @@
             color: #333;
         }
         h1 {
-            color: #0056b3; /* Color azul para el título principal */
+            color: #ff0000; /* Rojo para el título principal */
+            text-align: center;
         }
-        h2 {
-            color: #ff5733; /* Color naranja para los subtítulos h2 */
-        }
-        h3 {
-            color: #33ff57; /* Color verde para los subtítulos h3 */
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        pre {
-            background-color: #eee;
-            padding: 10px;
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: #fff;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        .faq-question {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff0000; /* Rojo para las preguntas */
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: "+";
+            font-size: 24px;
+            color: #ff0000; /* Rojo para el ícono */
+        }
+        .faq-question.active::after {
+            content: "-";
+        }
+        .faq-answer {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <h1>Guía de Preguntas Frecuentes - MBE Vía Tocumen</h1>
-    <h2>Encuentra respuestas rápidas a tus preguntas</h2>
-    <img src="https://via.placeholder.com/200" alt="Logo MBE Vía Tocumen" width="200">
-    
-    <h3>1. ¿Cómo crear un casillero?</h3>
-    <p>Para crear un casillero, regístrate en <a href="https://www.mbe-ca.com/ebox/#toForm">este enlace</a> y selecciona "Vía Tocumen".</p>
 
-    <h3>2. ¿Cómo configurar la dirección de envío?</h3>
-    <p>Usa la siguiente dirección:</p>
-    <pre>
-    Nombre: [Tu nombre completo]
-    Dirección 1: 2250 NW 114th Ave Unit 1P
-    Dirección 2: Casillero (PTY-------)
-    Ciudad: Miami
-    Estado: Florida
-    Código Postal: 33192
-    País: United States
-    Teléfono: 786 342 0315
-    </pre>
+    <div class="faq-item">
+        <div class="faq-question">1. ¿Cómo crear un casillero?</div>
+        <div class="faq-answer">
+            <p>Para crear un casillero, regístrate en <a href="https://www.mbe-ca.com/ebox/#toForm">este enlace</a> y selecciona "Vía Tocumen".</p>
+        </div>
+    </div>
 
-    <h3>3. ¿Cuánto tarda en llegar un paquete?</h3>
-    <p>El tiempo de entrega depende del tipo de envío:</p>
-    <ul>
-        <li>Carga Aérea: 24-48 horas.</li>
-        <li>Carga Marítima: 10-14 días hábiles.</li>
-        <li>Carga Peligrosa: 1 semana.</li>
-    </ul>
+    <div class="faq-item">
+        <div class="faq-question">2. ¿Cómo configurar la dirección de envío?</div>
+        <div class="faq-answer">
+            <p>Usa la siguiente dirección:</p>
+            <pre>
+Nombre: [Tu nombre completo]
+Dirección 1: 2250 NW 114th Ave Unit 1P
+Dirección 2: Casillero (PTY-------)
+Ciudad: Miami
+Estado: Florida
+Código Postal: 33192
+País: United States
+Teléfono: 786 342 0315
+            </pre>
+        </div>
+    </div>
 
-    <h3>4. ¿Cómo rastrear mi paquete?</h3>
-    <p>Usa el número de seguimiento en <a href="https://www.17track.net">17Track</a> o envíanos el número para ayudarte.</p>
+    <div class="faq-item">
+        <div class="faq-question">3. ¿Cuánto tarda en llegar un paquete?</div>
+        <div class="faq-answer">
+            <p>El tiempo de entrega depende del tipo de envío:</p>
+            <ul>
+                <li>Carga Aérea: 24-48 horas.</li>
+                <li>Carga Marítima: 10-14 días hábiles.</li>
+                <li>Carga Peligrosa: 1 semana.</li>
+            </ul>
+        </div>
+    </div>
 
-    <h3>5. ¿Ofrecen delivery local?</h3>
-    <p>Sí, ofrecemos delivery local con coordinación previa. Contáctanos para programar la entrega.</p>
+    <div class="faq-item">
+        <div class="faq-question">4. ¿Cómo rastrear mi paquete?</div>
+        <div class="faq-answer">
+            <p>Usa el número de seguimiento en <a href="https://www.17track.net">17Track</a> o envíanos el número para ayudarte.</p>
+        </div>
+    </div>
 
-    <h3>6. ¿Manejan cargas peligrosas?</h3>
-    <p>Sí, manejamos cargas peligrosas como baterías, perfumes y cosméticos inflamables. Estas cargas salen una vez por semana.</p>
+    <div class="faq-item">
+        <div class="faq-question">5. ¿Ofrecen delivery local?</div>
+        <div class="faq-answer">
+            <p>Sí, ofrecemos delivery local con coordinación previa. Contáctanos para programar la entrega.</p>
+        </div>
+    </div>
 
-    <h3>7. ¿Puedo personalizar artículos promocionales?</h3>
-    <p>¡Claro! Ofrecemos servicios de personalización como sublimación en tazas, camisetas, gorras, y más.</p>
+    <div class="faq-item">
+        <div class="faq-question">6. ¿Manejan cargas peligrosas?</div>
+        <div class="faq-answer">
+            <p>Sí, manejamos cargas peligrosas como baterías, perfumes y cosméticos inflamables. Estas cargas salen una vez por semana.</p>
+        </div>
+    </div>
 
-    <h3>8. ¿Cómo contactarlos?</h3>
-    <p>Puedes contactarnos en:</p>
-    <ul>
-        <li><strong>Dirección:</strong> Vía Tocumen, Plaza Airport Commercial Center, Local 21, Ciudad de Panamá.</li>
-        <li><strong>Teléfono:</strong> 398-6559 / 398-8152 / +507 6920-2843</li>
-        <li><strong>Correo:</strong> viatocumen@mbe-ca.com</li>
-        <li><strong>Redes Sociales:</strong> [@mbeviatocumen]</li>
-    </ul>
+    <div class="faq-item">
+        <div class="faq-question">7. ¿Puedo personalizar artículos promocionales?</div>
+        <div class="faq-answer">
+            <p>¡Claro! Ofrecemos servicios de personalización como sublimación en tazas, camisetas, gorras, y más.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">8. ¿Cómo contactarlos?</div>
+        <div class="faq-answer">
+            <p>Puedes contactarnos en:</p>
+            <ul>
+                <li><strong>Dirección:</strong> Vía Tocumen, Plaza Airport Commercial Center, Local 21, Ciudad de Panamá.</li>
+                <li><strong>Teléfono:</strong> 398-6559 / 398-8152 / +507 6920-2843</li>
+                <li><strong>Correo:</strong> viatocumen@mbe-ca.com</li>
+                <li><strong>Redes Sociales:</strong> [@mbeviatocumen]</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para manejar el despliegue de las respuestas
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                // Cierra todas las respuestas abiertas
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                // Abre o cierra la respuesta actual
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
